@@ -33,10 +33,8 @@ export default function Page({ errors, messages }: Props) {
     const handleChangePasswordSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         post("/my-account/change-password")
-        console.log(errors)
     }
 
-    console.log(messages)
     return (
         <>
             <Head title="User Setting" />

@@ -19,15 +19,6 @@ createInertiaApp({
       `../pages/${name}.tsx`,
       import.meta.glob('../pages/**/*.tsx'),
     )
-
-    // const page: any = await resolvePageComponent(
-    //   `../pages/${name}.tsx`,
-    //   import.meta.glob('../pages/**/*.tsx')
-    // )
-
-    // page.default.layout = DefaultLayout
-    // console.log("page", page)
-    // return page
   },
 
   setup({ el, App, props }) {

@@ -12,12 +12,11 @@ export default class ProfilesController {
     @inject()
     async changeMyPassword({ request, response, auth, session }: HttpContext, changePassword: AdminChangePassword) {
 
-        // console.log(auth.user)
         const data = await request.validateUsing(changePasswordValidator)
-        console.log(data)
+
         await auth.authenticate()
         const user = await changePassword.handle({ data, auth })
-        console.log("useruser", user)
+
         if (!user) {
             return response.redirect().back()
         }
