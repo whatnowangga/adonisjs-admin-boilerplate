@@ -25,7 +25,6 @@ export default class WebLogin {
         const key = this.getRateKey(data.email)
 
         const [error, user] = await this.limit.penalize(key, () => {
-            console.log(data)
             return UserAdmin.verifyCredentials(data.email, data.password)
         })
 

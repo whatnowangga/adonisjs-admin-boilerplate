@@ -1,5 +1,5 @@
-import { Head, router, useForm } from '@inertiajs/react'
-import { FormEvent, useState } from 'react'
+import { Head, useForm } from '@inertiajs/react'
+import { FormEvent } from 'react'
 import IconLockDots from '~/components/Icon/IconLockDots'
 import IconMail from '~/components/Icon/IconMail'
 import IconX from '~/components/Icon/IconX'
@@ -18,21 +18,9 @@ export default function Login({ errors }: { errors?: formErrors }) {
     })
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log(data)
-        console.log(processing)
         post("/login")
-        // post('/login')
     }
-    // const submitForm = () => {
-    //     console.log(formEmail, formPassword)
 
-    //     const res = router.post('/auth/login', {
-    //         // _token: props.csrf_token,
-    //         email: formEmail,
-    //         password: formPassword
-    //     })
-    //     console.log(res)
-    // };
     return (
         <>
             <Head title="Login" />

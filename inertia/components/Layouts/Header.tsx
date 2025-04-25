@@ -6,11 +6,11 @@ import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
 import IconCaretDown from '../Icon/IconCaretDown';
 import UsersAdminDto from '#dtos/users_admin';
 import { router } from '@inertiajs/react';
+import IconUser from '../Icon/IconUser';
 
 
 const Header = (props: { user: UsersAdminDto }) => {
     useEffect(() => {
-        console.log("sdfsdfsdf", props.user)
         const selector = document.querySelector('ul.horizontal-menu a[href="' + window.location.pathname + '"]');
         if (selector) {
             selector.classList.add('active');
@@ -80,12 +80,12 @@ const Header = (props: { user: UsersAdminDto }) => {
                                             </div>
                                         </div>
                                     </li>
-                                    {/* <li>
-                                        <a href="/users/profile" className="dark:hover:text-white">
+                                    <li>
+                                        <a href="/my-account" className="dark:hover:text-white">
                                             <IconUser className="w-4.5 h-4.5 mr-2 shrink-0" />
                                             Profile
                                         </a>
-                                    </li> */}
+                                    </li>
                                     <li className="border-t border-white-light dark:border-white-light/10">
                                         <button className="text-danger !py-3" onClick={() => handleLogout()}>
                                             <IconLogout className="w-4.5 h-4.5 mr-2 rotate-90 shrink-0" />

@@ -6,7 +6,7 @@ export default class UsersAdminDto extends BaseModelDto {
   declare id: number
   declare fullName: string | null
   declare email: string
-  declare password: string
+  // declare password: string
   declare createdAt: string
   declare updatedAt: string | null
 
@@ -18,7 +18,7 @@ export default class UsersAdminDto extends BaseModelDto {
     this.id = usersAdmin.id
     this.fullName = usersAdmin.fullName
     this.email = usersAdmin.email
-    this.password = usersAdmin.password
+    // this.password = usersAdmin.password
     this.createdAt = usersAdmin.createdAt.toISO()!
     this.updatedAt = usersAdmin.updatedAt?.toISO()!
   }
